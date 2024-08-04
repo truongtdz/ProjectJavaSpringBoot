@@ -19,7 +19,7 @@ public class BuildingAPI{
 	private BuildingService buildingService;
 	@GetMapping(value = "/demo/building")
 	public List<BuildingModel> deMoAPI(@RequestParam Map<String, Object> map) {
-		List<BuildingModel> result = buildingService.findAll(map);
-		return result;
+		List<BuildingModel> res = buildingService.findAll(map);
+		return res;
 	}
 }
