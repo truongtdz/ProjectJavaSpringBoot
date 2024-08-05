@@ -1,4 +1,4 @@
-package com.projectfirst.model;
+package com.projectbuilding.model;
 
 public class BuildingModel {
 	private String name, address, managerName, managerPhone, serviceFee;

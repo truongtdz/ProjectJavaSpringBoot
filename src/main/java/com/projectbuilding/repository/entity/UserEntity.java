@@ -1,4 +1,4 @@
-package com.projectfirst.repository.entity;
+package com.projectbuilding.repository.entity;
 
 public class UserEntity{
 	private String username, password, fullname, phone, email;

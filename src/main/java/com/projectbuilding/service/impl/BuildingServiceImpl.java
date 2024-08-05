@@ -1,4 +1,4 @@
-package com.projectfirst.service.impl;
+package com.projectbuilding.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.projectfirst.model.BuildingModel;
-import com.projectfirst.repository.BuildingRepository;
-import com.projectfirst.repository.DistrictRopository;
-import com.projectfirst.repository.entity.BuildingEntity;
-import com.projectfirst.repository.entity.DistrictEntity;
-import com.projectfirst.service.BuildingService;
+import com.projectbuilding.model.BuildingModel;
+import com.projectbuilding.repository.BuildingRepository;
+import com.projectbuilding.repository.DistrictRopository;
+import com.projectbuilding.repository.entity.BuildingEntity;
+import com.projectbuilding.repository.entity.DistrictEntity;
+import com.projectbuilding.service.BuildingService;
 
 @Service
 public class BuildingServiceImpl implements BuildingService{

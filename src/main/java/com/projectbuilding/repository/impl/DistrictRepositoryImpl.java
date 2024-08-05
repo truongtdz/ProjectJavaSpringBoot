@@ -1,4 +1,4 @@
-package com.projectfirst.repository.impl;
+package com.projectbuilding.repository.impl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,8 +7,8 @@ import java.sql.Statement;
 
 import org.springframework.stereotype.Repository;
 
-import com.projectfirst.repository.DistrictRopository;
-import com.projectfirst.repository.entity.DistrictEntity;
+import com.projectbuilding.repository.DistrictRopository;
+import com.projectbuilding.repository.entity.DistrictEntity;
 
 @Repository
 public class DistrictRepositoryImpl implements DistrictRopository{

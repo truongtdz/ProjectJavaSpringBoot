@@ -1,4 +1,4 @@
-package com.projectfirst.api;
+package com.projectbuilding.api;
 
 import java.util.List;
 import java.util.Map;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projectfirst.model.BuildingModel;
-import com.projectfirst.service.BuildingService;
+import com.projectbuilding.model.BuildingModel;
+import com.projectbuilding.service.BuildingService;
 
 
 @RestController

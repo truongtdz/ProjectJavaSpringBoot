@@ -1,9 +1,9 @@
-package com.projectfirst.service;
+package com.projectbuilding.service;
 
 import java.util.List;
 import java.util.Map;
 
-import com.projectfirst.model.BuildingModel;
+import com.projectbuilding.model.BuildingModel;
 
 public interface BuildingService{
 	List<BuildingModel> findAll(Map<String, Object> map, List<String> list);

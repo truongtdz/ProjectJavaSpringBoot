@@ -1,4 +1,4 @@
-package com.projectfirst.Util;
+package com.projectbuilding.util;
 
 public class CheckString {
 	public static boolean CheckString(String s) {

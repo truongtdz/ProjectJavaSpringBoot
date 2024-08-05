@@ -1,13 +1,14 @@
-package com.projectfirst.service.impl;
+package com.projectbuilding.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.projectfirst.model.UserModel;
-import com.projectfirst.repository.UserRepository;
-import com.projectfirst.repository.entity.UserEntity;
-import com.projectfirst.service.UserService;
+
+import com.projectbuilding.model.UserModel;
+import com.projectbuilding.repository.UserRepository;
+import com.projectbuilding.repository.entity.UserEntity;
+import com.projectbuilding.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{

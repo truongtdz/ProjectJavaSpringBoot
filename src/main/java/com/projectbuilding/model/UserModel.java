@@ -1,4 +1,4 @@
-package com.projectfirst.model;
+package com.projectbuilding.model;
 
 public class UserModel {
 	private String username, password, fullname, contact;

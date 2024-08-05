@@ -1,4 +1,4 @@
-package com.projectfirst;
+package com.projectbuilding;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

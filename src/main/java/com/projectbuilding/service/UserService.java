@@ -1,8 +1,8 @@
-package com.projectfirst.service;
+package com.projectbuilding.service;
 
 import java.util.List;
 
-import com.projectfirst.model.UserModel;
+import com.projectbuilding.model.UserModel;
 
 public interface UserService {
 	List<UserModel> findAll();

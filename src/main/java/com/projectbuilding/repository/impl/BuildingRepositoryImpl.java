@@ -1,4 +1,4 @@
-package com.projectfirst.repository.impl;
+package com.projectbuilding.repository.impl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,11 +10,11 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.projectfirst.Util.CheckList;
-import com.projectfirst.Util.CheckNumber;
-import com.projectfirst.Util.CheckString;
-import com.projectfirst.repository.BuildingRepository;
-import com.projectfirst.repository.entity.BuildingEntity;
+import com.projectbuilding.util.CheckList;
+import com.projectbuilding.util.CheckNumber;
+import com.projectbuilding.util.CheckString;
+import com.projectbuilding.repository.BuildingRepository;
+import com.projectbuilding.repository.entity.BuildingEntity;
 
 @Repository
 public class BuildingRepositoryImpl implements BuildingRepository{

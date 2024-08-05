@@ -1,4 +1,4 @@
-package com.projectfirst.repository.impl;
+package com.projectbuilding.repository.impl;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,8 +10,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.projectfirst.repository.UserRepository;
-import com.projectfirst.repository.entity.UserEntity;
+import com.projectbuilding.repository.UserRepository;
+import com.projectbuilding.repository.entity.UserEntity;
 
 
 @Repository

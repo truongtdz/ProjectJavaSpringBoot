@@ -1,4 +1,4 @@
-package com.projectfirst.repository.entity;
+package com.projectbuilding.repository.entity;
 
 public class DistrictEntity {
 	private Long id;
