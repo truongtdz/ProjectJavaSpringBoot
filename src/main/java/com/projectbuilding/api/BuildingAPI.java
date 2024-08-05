@@ -14,7 +14,6 @@ import com.projectbuilding.service.BuildingService;
 
 @RestController
 public class BuildingAPI{
-	
 	@Autowired
 	private BuildingService buildingService;
 	@GetMapping(value = "/demo/building")
