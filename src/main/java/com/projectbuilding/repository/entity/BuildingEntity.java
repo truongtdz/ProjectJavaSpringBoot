@@ -8,7 +8,7 @@ public class BuildingEntity {
 	payment, renttime, decorationtime, type, note, linkOfBuilding, map, avatar, createdby,
 	motifiedby, managerName, managerPhoneNumber;
 	private Date createddate, motifieddate;
-	private int id, numberOfBasement, floorArea, rentPrice, districtid;
+	private long id, numberOfBasement, floorArea, rentPrice, districtid;
 	private double brokerageFee;
 	public String getName() {
 		return name;
@@ -161,25 +161,25 @@ public class BuildingEntity {
 	public void setMotifieddate(Date motifieddate) {
 		this.motifieddate = motifieddate;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNumberOfBasement() {
+	public long getNumberOfBasement() {
 		return numberOfBasement;
 	}
 	public void setNumberOfBasement(int numberOfBasement) {
 		this.numberOfBasement = numberOfBasement;
 	}
-	public int getFloorArea() {
+	public long getFloorArea() {
 		return floorArea;
 	}
 	public void setFloorArea(int floorArea) {
 		this.floorArea = floorArea;
 	}
-	public int getRentPrice() {
+	public long getRentPrice() {
 		return rentPrice;
 	}
 	public void setRentPrice(int rentPrice) {

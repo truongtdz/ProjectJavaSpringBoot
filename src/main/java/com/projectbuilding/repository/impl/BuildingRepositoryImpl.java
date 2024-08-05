@@ -13,14 +13,12 @@ import org.springframework.stereotype.Repository;
 import com.projectbuilding.util.CheckList;
 import com.projectbuilding.util.CheckNumber;
 import com.projectbuilding.util.CheckString;
+import com.projectbuilding.util.ConnectionDataBase;
 import com.projectbuilding.repository.BuildingRepository;
 import com.projectbuilding.repository.entity.BuildingEntity;
 
 @Repository
 public class BuildingRepositoryImpl implements BuildingRepository{
-	private final String URL = "jdbc:mysql://localhost:3306/estatebasic";
-	private final String UserName = "root";
-	private final String Password = "123456";
 	
 	public static void Jion(Map<String, Object> map, List<String> list, StringBuilder sql){
 		Long staffId = (Long) map.get("staffId");
@@ -83,7 +81,7 @@ public class BuildingRepositoryImpl implements BuildingRepository{
 		WhereBasic(map, list, where);
 		WhereSpecical(map, list, where);
 		sql.append(where);
-		try(Connection con = DriverManager.getConnection(URL, UserName, Password);
+		try(Connection con = ConnectionDataBase.getConnection();
 				Statement stmt = con.createStatement();
 				ResultSet rs = stmt.executeQuery(sql.toString());){
 			while (rs.next()){
