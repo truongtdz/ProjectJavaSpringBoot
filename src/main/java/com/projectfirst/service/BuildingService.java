@@ -6,5 +6,5 @@ import java.util.Map;
 import com.projectfirst.model.BuildingModel;
 
 public interface BuildingService{
-	List<BuildingModel> findAll(Map<String, Object> map);
+	List<BuildingModel> findAll(Map<String, Object> map, List<String> list);
 }

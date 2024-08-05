@@ -13,7 +13,7 @@ public class BuildingEntity {
 	public String getName() {
 		return name;
 	}
-	public int getDistrictid() {
+	public long getDistrictid() {
 		return districtid;
 	}
 	public void setDistrictid(int districtid) {
