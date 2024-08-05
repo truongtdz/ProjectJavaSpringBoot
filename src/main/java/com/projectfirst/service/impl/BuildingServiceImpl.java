@@ -36,6 +36,7 @@ public class BuildingServiceImpl implements BuildingService{
 			rs.setServiceFee(item.getServiceFee());
 			result.add(rs);
 		}
+		
 		return result;
 	}
 	
