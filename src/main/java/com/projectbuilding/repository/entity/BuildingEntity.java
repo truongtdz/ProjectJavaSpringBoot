@@ -8,18 +8,11 @@ public class BuildingEntity {
 	payment, renttime, decorationtime, type, note, linkOfBuilding, map, avatar, createdby,
 	motifiedby, managerName, managerPhoneNumber;
 	private Date createddate, motifieddate;
-	private int id, numberOfBasement, floorArea, rentPrice, districtid;
+	private long id, numberOfBasement, floorArea, rentPrice, districtid;
 	private double brokerageFee;
 	public String getName() {
 		return name;
 	}
-	public long getDistrictid() {
-		return districtid;
-	}
-	public void setDistrictid(int districtid) {
-		this.districtid = districtid;
-	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -149,48 +142,6 @@ public class BuildingEntity {
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
-	public Date getCreateddate() {
-		return createddate;
-	}
-	public void setCreateddate(Date createddate) {
-		this.createddate = createddate;
-	}
-	public Date getMotifieddate() {
-		return motifieddate;
-	}
-	public void setMotifieddate(Date motifieddate) {
-		this.motifieddate = motifieddate;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getNumberOfBasement() {
-		return numberOfBasement;
-	}
-	public void setNumberOfBasement(int numberOfBasement) {
-		this.numberOfBasement = numberOfBasement;
-	}
-	public int getFloorArea() {
-		return floorArea;
-	}
-	public void setFloorArea(int floorArea) {
-		this.floorArea = floorArea;
-	}
-	public int getRentPrice() {
-		return rentPrice;
-	}
-	public void setRentPrice(int rentPrice) {
-		this.rentPrice = rentPrice;
-	}
-	public double getBrokerageFee() {
-		return Double.parseDouble(String.format("%.2f", brokerageFee));
-	}
-	public void setBrokerageFee(double brokerageFee) {
-		this.brokerageFee = brokerageFee;
-	}
 	public String getCreatedby() {
 		return createdby;
 	}
@@ -215,5 +166,54 @@ public class BuildingEntity {
 	public void setManagerPhoneNumber(String managerPhoneNumber) {
 		this.managerPhoneNumber = managerPhoneNumber;
 	}
+	public Date getCreateddate() {
+		return createddate;
+	}
+	public void setCreateddate(Date createddate) {
+		this.createddate = createddate;
+	}
+	public Date getMotifieddate() {
+		return motifieddate;
+	}
+	public void setMotifieddate(Date motifieddate) {
+		this.motifieddate = motifieddate;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public long getNumberOfBasement() {
+		return numberOfBasement;
+	}
+	public void setNumberOfBasement(long numberOfBasement) {
+		this.numberOfBasement = numberOfBasement;
+	}
+	public long getFloorArea() {
+		return floorArea;
+	}
+	public void setFloorArea(long floorArea) {
+		this.floorArea = floorArea;
+	}
+	public long getRentPrice() {
+		return rentPrice;
+	}
+	public void setRentPrice(long rentPrice) {
+		this.rentPrice = rentPrice;
+	}
+	public long getDistrictid() {
+		return districtid;
+	}
+	public void setDistrictid(long districtid) {
+		this.districtid = districtid;
+	}
+	public double getBrokerageFee() {
+		return brokerageFee;
+	}
+	public void setBrokerageFee(double brokerageFee) {
+		this.brokerageFee = brokerageFee;
+	}
+	
 	
 }

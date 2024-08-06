@@ -1,8 +1,15 @@
 package com.projectbuilding.model;
 
 public class BuildingModel {
-	private String name, address, managerName, managerPhone, serviceFee;
-	private int numberOfbasement, floorArea, rentPrice;
+	private String name, address, managerName, managerPhone, serviceFee, rentArea;
+	private long numberOfbasement, floorArea, rentPrice;
+	
+	public String getRentArea() {
+		return rentArea;
+	}
+	public void setRentArea(String rentArea) {
+		this.rentArea = rentArea;
+	}
 	public String getName() {
 		return name;
 	}
@@ -33,23 +40,25 @@ public class BuildingModel {
 	public void setServiceFee(String serviceFee) {
 		this.serviceFee = serviceFee;
 	}
-	public int getNumberOfbasement() {
+	public long getNumberOfbasement() {
 		return numberOfbasement;
 	}
-	public void setNumberOfbasement(int numberOfbasement) {
+	public void setNumberOfbasement(long numberOfbasement) {
 		this.numberOfbasement = numberOfbasement;
 	}
-	public int getFloorArea() {
+	public long getFloorArea() {
 		return floorArea;
 	}
-	public void setFloorArea(int floorArea) {
+	public void setFloorArea(long floorArea) {
 		this.floorArea = floorArea;
 	}
-	public int getRentPrice() {
+	public long getRentPrice() {
 		return rentPrice;
 	}
-	public void setRentPrice(int rentPrice) {
+	public void setRentPrice(long rentPrice) {
 		this.rentPrice = rentPrice;
 	}
+	
+	
 	
 }

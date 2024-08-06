@@ -8,26 +8,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.projectbuilding.util.CheckList;
 import com.projectbuilding.util.CheckNumber;
 import com.projectbuilding.util.CheckString;
+import com.projectbuilding.util.ConnectionDataBase;
 import com.projectbuilding.repository.BuildingRepository;
 import com.projectbuilding.repository.entity.BuildingEntity;
 
 @Repository
 public class BuildingRepositoryImpl implements BuildingRepository{
-	private final String URL = "jdbc:mysql://localhost:3306/estatebasic";
-	private final String UserName = "root";
-	private final String Password = "123456";
+	@Autowired
+	private ModelMapper modelMapper;
 	
 	public static void Jion(Map<String, Object> map, List<String> list, StringBuilder sql){
 		Long staffId = (Long) map.get("staffId");
 		if(staffId != null) {
 			sql.append("\n INNER JOIN assignmentbuilding ON b.id = assignmentbuilding.buildingid");
 		}
-		if(CheckList.CheckList(list)) {
+		if(list != null && list.size() != 0) {
 			sql.append("\n INNER JOIN buildingrenttype ON b.id = buildingrenttype.buildingid");
 			sql.append("\n INNER JOIN renttype ON renttype.id = buildingrenttype.renttypeid");
 		}
@@ -75,7 +76,7 @@ public class BuildingRepositoryImpl implements BuildingRepository{
 	@Override
 	public List<BuildingEntity> findAll(Map<String, Object> map, List<String> list) {
 		List<BuildingEntity> result = new ArrayList<>();
-		String s = "SELECT b.name, b.street, b.ward, b.districtid, b.numberofbasement, b.managername,"
+		String s = "SELECT b.id, b.name, b.street, b.ward, b.districtid, b.numberofbasement, b.managername,"
 				+ " b.managerphonenumber, b.floorarea, b.servicefee, b.rentprice FROM building b";
 		StringBuilder sql = new StringBuilder(s);
 		Jion(map, list, sql); sql.append("\n");
@@ -83,11 +84,13 @@ public class BuildingRepositoryImpl implements BuildingRepository{
 		WhereBasic(map, list, where);
 		WhereSpecical(map, list, where);
 		sql.append(where);
-		try(Connection con = DriverManager.getConnection(URL, UserName, Password);
+		try(Connection con = ConnectionDataBase.getConnection();
 				Statement stmt = con.createStatement();
 				ResultSet rs = stmt.executeQuery(sql.toString());){
 			while (rs.next()){
 				BuildingEntity item = new BuildingEntity();
+						//modelMapper.map(rs, BuildingEntity.class);
+				item.setId(Long.parseLong(rs.getString("id")));
 				item.setName(rs.getString("name"));
 				item.setStreet(rs.getString("street"));
 				item.setWard(rs.getString("ward"));
