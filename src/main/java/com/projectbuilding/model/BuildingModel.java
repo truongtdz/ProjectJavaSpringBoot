@@ -7,6 +7,7 @@ public class BuildingModel {
 	private String name, address, managerName, managerPhone, serviceFee, rentArea;
 	private long numberOfbasement, floorArea, rentPrice;
 	
+	
 	public String getRentArea() {
 		return rentArea;
 	}
