@@ -12,6 +12,7 @@ import com.projectbuilding.model.BuildingModel;
 import com.projectbuilding.service.BuildingService;
 
 
+
 @RestController
 public class BuildingAPI{
 	@Autowired
