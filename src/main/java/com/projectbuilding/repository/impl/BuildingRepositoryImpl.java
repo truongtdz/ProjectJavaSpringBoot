@@ -20,12 +20,9 @@ import com.projectbuilding.repository.entity.BuildingEntity;
 
 @Repository
 public class BuildingRepositoryImpl implements BuildingRepository{
-<<<<<<< HEAD
-=======
 	@Autowired
 	private ModelMapper modelMapper;
->>>>>>> AddAndTest
-	
+
 	public static void Jion(Map<String, Object> map, List<String> list, StringBuilder sql){
 		Long staffId = (Long) map.get("staffId");
 		if(staffId != null) {

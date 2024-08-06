@@ -142,51 +142,6 @@ public class BuildingEntity {
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
-<<<<<<< HEAD
-	public Date getCreateddate() {
-		return createddate;
-	}
-	public void setCreateddate(Date createddate) {
-		this.createddate = createddate;
-	}
-	public Date getMotifieddate() {
-		return motifieddate;
-	}
-	public void setMotifieddate(Date motifieddate) {
-		this.motifieddate = motifieddate;
-	}
-	public long getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public long getNumberOfBasement() {
-		return numberOfBasement;
-	}
-	public void setNumberOfBasement(int numberOfBasement) {
-		this.numberOfBasement = numberOfBasement;
-	}
-	public long getFloorArea() {
-		return floorArea;
-	}
-	public void setFloorArea(int floorArea) {
-		this.floorArea = floorArea;
-	}
-	public long getRentPrice() {
-		return rentPrice;
-	}
-	public void setRentPrice(int rentPrice) {
-		this.rentPrice = rentPrice;
-	}
-	public double getBrokerageFee() {
-		return Double.parseDouble(String.format("%.2f", brokerageFee));
-	}
-	public void setBrokerageFee(double brokerageFee) {
-		this.brokerageFee = brokerageFee;
-	}
-=======
->>>>>>> AddAndTest
 	public String getCreatedby() {
 		return createdby;
 	}
@@ -259,6 +214,5 @@ public class BuildingEntity {
 	public void setBrokerageFee(double brokerageFee) {
 		this.brokerageFee = brokerageFee;
 	}
-	
 	
 }
