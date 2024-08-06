@@ -1,12 +1,8 @@
 package com.projectbuilding.model;
 
 public class BuildingModel {
-
-	private String name, address, managerName, managerPhone, serviceFee;
-	private long numberOfbasement, floorArea, rentPrice;
 	private String name, address, managerName, managerPhone, serviceFee, rentArea;
 	private long numberOfbasement, floorArea, rentPrice;
-	
 	
 	public String getRentArea() {
 		return rentArea;
@@ -14,7 +10,6 @@ public class BuildingModel {
 	public void setRentArea(String rentArea) {
 		this.rentArea = rentArea;
 	}
-
 	public String getName() {
 		return name;
 	}
@@ -63,7 +58,5 @@ public class BuildingModel {
 	public void setRentPrice(long rentPrice) {
 		this.rentPrice = rentPrice;
 	}
-	
-	
 	
 }
