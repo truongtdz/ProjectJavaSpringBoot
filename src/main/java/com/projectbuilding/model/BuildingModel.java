@@ -1,8 +1,20 @@
 package com.projectbuilding.model;
 
 public class BuildingModel {
+<<<<<<< HEAD
 	private String name, address, managerName, managerPhone, serviceFee;
 	private long numberOfbasement, floorArea, rentPrice;
+=======
+	private String name, address, managerName, managerPhone, serviceFee, rentArea;
+	private long numberOfbasement, floorArea, rentPrice;
+	
+	public String getRentArea() {
+		return rentArea;
+	}
+	public void setRentArea(String rentArea) {
+		this.rentArea = rentArea;
+	}
+>>>>>>> AddAndTest
 	public String getName() {
 		return name;
 	}

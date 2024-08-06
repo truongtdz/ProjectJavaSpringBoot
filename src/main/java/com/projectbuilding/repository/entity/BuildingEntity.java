@@ -13,13 +13,6 @@ public class BuildingEntity {
 	public String getName() {
 		return name;
 	}
-	public long getDistrictid() {
-		return districtid;
-	}
-	public void setDistrictid(int districtid) {
-		this.districtid = districtid;
-	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -149,6 +142,7 @@ public class BuildingEntity {
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
+<<<<<<< HEAD
 	public Date getCreateddate() {
 		return createddate;
 	}
@@ -191,6 +185,8 @@ public class BuildingEntity {
 	public void setBrokerageFee(double brokerageFee) {
 		this.brokerageFee = brokerageFee;
 	}
+=======
+>>>>>>> AddAndTest
 	public String getCreatedby() {
 		return createdby;
 	}
@@ -215,5 +211,54 @@ public class BuildingEntity {
 	public void setManagerPhoneNumber(String managerPhoneNumber) {
 		this.managerPhoneNumber = managerPhoneNumber;
 	}
+	public Date getCreateddate() {
+		return createddate;
+	}
+	public void setCreateddate(Date createddate) {
+		this.createddate = createddate;
+	}
+	public Date getMotifieddate() {
+		return motifieddate;
+	}
+	public void setMotifieddate(Date motifieddate) {
+		this.motifieddate = motifieddate;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public long getNumberOfBasement() {
+		return numberOfBasement;
+	}
+	public void setNumberOfBasement(long numberOfBasement) {
+		this.numberOfBasement = numberOfBasement;
+	}
+	public long getFloorArea() {
+		return floorArea;
+	}
+	public void setFloorArea(long floorArea) {
+		this.floorArea = floorArea;
+	}
+	public long getRentPrice() {
+		return rentPrice;
+	}
+	public void setRentPrice(long rentPrice) {
+		this.rentPrice = rentPrice;
+	}
+	public long getDistrictid() {
+		return districtid;
+	}
+	public void setDistrictid(long districtid) {
+		this.districtid = districtid;
+	}
+	public double getBrokerageFee() {
+		return brokerageFee;
+	}
+	public void setBrokerageFee(double brokerageFee) {
+		this.brokerageFee = brokerageFee;
+	}
+	
 	
 }

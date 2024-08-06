@@ -14,12 +14,11 @@ import com.projectbuilding.service.BuildingService;
 
 @RestController
 public class BuildingAPI{
-	
 	@Autowired
 	private BuildingService buildingService;
 	@GetMapping(value = "/demo/building")
 	public List<BuildingModel> deMoAPI(@RequestParam Map<String, Object> map,
-			                           @RequestParam(value = "typeCode") List<String> list) {
+			                           @RequestParam(value = "typeCode", required = false) List<String> list) {
 		List<BuildingModel> res = buildingService.findAll(map, list);
 		return res;
 	}
