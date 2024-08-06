@@ -38,5 +38,6 @@ public class BuildingModelConverter {
 		String resultRentAreas = rentAreas.stream().map(it -> it.getValue().toString()).collect(Collectors.joining(","));
 		rs.setRentArea(resultRentAreas);
 		return rs;
+		
 	}
 }
