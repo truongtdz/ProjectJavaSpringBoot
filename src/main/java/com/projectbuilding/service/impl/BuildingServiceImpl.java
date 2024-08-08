@@ -27,7 +27,7 @@ public class BuildingServiceImpl implements BuildingService{
 	public List<BuildingModel> findAll(Map<String, Object> map, List<String> list) {
 		List<BuildingModel> result = new ArrayList<>();
 		for(BuildingEntity item : buildingRepository.findAll(map, list)) {
-			BuildingModel it = buildingModelConverter.tobuildingModel(item);
+			BuildingModel it = buildingModelConverter.toBuildingModel(item);
 			result.add(it);
 		}
 		

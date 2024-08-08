@@ -23,7 +23,7 @@ public class BuildingModelConverter {
 	@Autowired
 	private ModelMapper modelMapper;
 	
-	public BuildingModel tobuildingModel(BuildingEntity item) {
+	public BuildingModel toBuildingModel(BuildingEntity item) {
 		BuildingModel rs = modelMapper.map(item, BuildingModel.class);
 		rs.setName(item.getName());
 		DistrictEntity districtEntity = districtRopository.findNameById(item.getDistrictid());
