@@ -8,8 +8,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.projectbuilding.converter.BuildingModelConverter;
-import com.projectbuilding.model.BuildingModel;
+import com.projectbuilding.builder.BuildingSearchBuilder;
+import com.projectbuilding.converter.BuildingDTOConverter;
+import com.projectbuilding.model.BuildingDTO;
 import com.projectbuilding.repository.BuildingRepository;
 import com.projectbuilding.repository.DistrictRopository;
 import com.projectbuilding.repository.RentAreaRepository;
@@ -21,13 +22,13 @@ public class BuildingServiceImpl implements BuildingService{
 	@Autowired
 	private BuildingRepository buildingRepository;
 	@Autowired
-	private BuildingModelConverter buildingModelConverter;
+	private BuildingDTOConverter buildingModelConverter;
 	
 	@Override
-	public List<BuildingModel> findAll(Map<String, Object> map, List<String> list) {
-		List<BuildingModel> result = new ArrayList<>();
-		for(BuildingEntity item : buildingRepository.findAll(map, list)) {
-			BuildingModel it = buildingModelConverter.toBuildingModel(item);
+	public List<BuildingDTO> findAll(BuildingSearchBuilder buildingSearchBuilder) {
+		List<BuildingDTO> result = new ArrayList<>();
+		for(BuildingEntity item : buildingRepository.findAll(buildingSearchBuilder)) {
+			BuildingDTO it = buildingModelConverter.toBuildingDTO(item);
 			result.add(it);
 		}
 		

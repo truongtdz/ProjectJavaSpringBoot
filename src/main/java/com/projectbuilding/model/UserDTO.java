@@ -1,6 +1,6 @@
 package com.projectbuilding.model;
 
-public class UserModel {
+public class UserDTO {
 	private String username, password, fullname, contact;
 	private String createddate, modifieddate, createdby, modifiedby;
 	private int status;

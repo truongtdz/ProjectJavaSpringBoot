@@ -3,8 +3,9 @@ package com.projectbuilding.service;
 import java.util.List;
 import java.util.Map;
 
-import com.projectbuilding.model.BuildingModel;
+import com.projectbuilding.builder.BuildingSearchBuilder;
+import com.projectbuilding.model.BuildingDTO;
 
 public interface BuildingService{
-	List<BuildingModel> findAll(Map<String, Object> map, List<String> list);
+	List<BuildingDTO> findAll(BuildingSearchBuilder buildingSearchBuilder);
 }

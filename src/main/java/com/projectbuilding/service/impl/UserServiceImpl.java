@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.projectbuilding.model.UserModel;
+import com.projectbuilding.model.UserDTO;
 import com.projectbuilding.repository.UserRepository;
 import com.projectbuilding.repository.entity.UserEntity;
 import com.projectbuilding.service.UserService;
@@ -15,11 +15,11 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private UserRepository userRepository;
 	@Override
-	public List<UserModel> findAll() {
-		List<UserModel> result = new ArrayList<>();
+	public List<UserDTO> findAll() {
+		List<UserDTO> result = new ArrayList<>();
 		List<UserEntity> user = userRepository.findAll();
 		for(UserEntity item : user) {
-			UserModel userModel = new UserModel();
+			UserDTO userModel = new UserDTO();
 			userModel.setUsername(item.getUsername());
 			userModel.setPassword(item.getPassword());
 			userModel.setContact(item.getPhone() + " , " + item.getEmail());
