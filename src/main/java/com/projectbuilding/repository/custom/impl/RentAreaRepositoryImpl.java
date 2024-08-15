@@ -1,4 +1,4 @@
-package com.projectbuilding.repository.impl;
+package com.projectbuilding.repository.custom.impl;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,8 +8,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.projectbuilding.entity.RentAreaEntity;
 import com.projectbuilding.repository.RentAreaRepository;
-import com.projectbuilding.repository.entity.RentAreaEntity;
 import com.projectbuilding.util.ConnectionDataBase;
 
 @Repository
@@ -23,7 +23,7 @@ public class RentAreaRepositoryImpl implements RentAreaRepository{
 				ResultSet rs = stmt.executeQuery(sql)){
 			while(rs.next()) {
 				RentAreaEntity rentAreaEntity = new RentAreaEntity();
-				rentAreaEntity.setValue(rs.getString("value"));
+				rentAreaEntity.setValue(rs.getLong("value"));
 				list.add(rentAreaEntity);
 			}
 		} catch(Exception ex) {

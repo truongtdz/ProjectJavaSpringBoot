@@ -3,7 +3,10 @@ package com.projectbuilding.api;
 import java.util.List;
 import java.util.Map;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +18,8 @@ import com.projectbuilding.service.BuildingService;
 
 
 @RestController
+@Transactional
+@PropertySource("classpath:application.properties")
 public class BuildingAPI{
 	@Autowired
 	private BuildingService buildingService;

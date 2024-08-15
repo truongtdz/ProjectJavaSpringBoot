@@ -1,14 +1,10 @@
-package com.projectbuilding.repository.entity;
+package com.projectbuilding.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -27,16 +23,13 @@ public class BuildingEntity {
 	@Column(name = "ward")
 	private String ward;
 	
-//	@Column(name = "districtid")
-//	private Long districtId;
-	
 	@Column(name = "structure")
 	private String structure;
 	
 	@Column(name = "numberofbasement")
 	private Long numberOfBasement;
 	
-	@Column(name = "floorArea")
+	@Column(name = "floorarea")
 	private Long floorArea;
 	
 	@Column(name = "direction")
@@ -45,11 +38,11 @@ public class BuildingEntity {
 	@Column(name = "level")
 	private String level;
 	
-	@Column(name = "rentPrice")
+	@Column(name = "rentprice")
 	private Long rentPrice;
 	
-	@Column(name = "rentpricedescriptio")
-	private String rentpriceDescriptio;
+	@Column(name = "rentpricedescription")
+	private String rentpriceDescription;
 	
 	@Column(name = "servicefee")
 	private String serviceFee;
@@ -57,10 +50,10 @@ public class BuildingEntity {
 	@Column(name = "carfee")
 	private String carFee;
 	
-	@Column(name = "motorbikeFee")
+	@Column(name = "motorbikefee")
 	private String motorbikeFee;
 	
-	@Column(name = "overTimeFee")
+	@Column(name = "overtimefee")
 	private String overTimeFee;
 	
 	@Column(name = "waterfee")
@@ -93,20 +86,17 @@ public class BuildingEntity {
 	@Column(name = "map")
 	private String map;
 	
-	@Column(name = "image")
-	private String image;
-	
 	@Column(name = "createddate")
 	private Date createdDate;
 	
-	@Column(name = "motifieddate")
-	private Date motifiedDate;
+	@Column(name = "modifieddate")
+	private Date modifiedDate;
 	
 	@Column(name = "createdby")
 	private String createdBy;
 	
-	@Column(name = "motifiedby")
-	private String motifiedBy;
+	@Column(name = "modifiedby")
+	private String modifiedBy;
 	
 	@Column(name = "managername")
 	private String managerName;
@@ -114,13 +104,14 @@ public class BuildingEntity {
 	@Column(name = "managerphonenumber")
 	private String managerPhoneNumber;
 	
-	@Column(name = "typeCode")
+	@Column(name = "typecode")
 	private String typeCode;
 	
-	@ManyToOne
-	@JoinColumn(name = "districtid")
-	private DistrictEntity district;
+	@Column(name = "district")
+	private String district;
 	
+	@OneToMany(mappedBy = "building", fetch = FetchType.LAZY)
+	private List<RentAreaEntity> rentAreaEntities = new ArrayList<>();	
 
 	public String getTypeCode() {
 		return typeCode;
@@ -138,11 +129,11 @@ public class BuildingEntity {
 		this.id = id;
 	}
 
-	public DistrictEntity getDistrict() {
+	public String getDistrict() {
 		return district;
 	}
 
-	public void setDistrict(DistrictEntity district) {
+	public void setDistrict(String district) {
 		this.district = district;
 	}
 
@@ -218,12 +209,12 @@ public class BuildingEntity {
 		this.rentPrice = rentPrice;
 	}
 
-	public String getRentpriceDescriptio() {
-		return rentpriceDescriptio;
+	public String getRentpriceDescription() {
+		return rentpriceDescription;
 	}
 
-	public void setRentpriceDescriptio(String rentpriceDescriptio) {
-		this.rentpriceDescriptio = rentpriceDescriptio;
+	public void setRentpriceDescriptio(String rentpriceDescription) {
+		this.rentpriceDescription = rentpriceDescription;
 	}
 
 	public String getServiceFee() {
@@ -338,14 +329,6 @@ public class BuildingEntity {
 		this.map = map;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -354,12 +337,12 @@ public class BuildingEntity {
 		this.createdDate = createdDate;
 	}
 
-	public Date getMotifiedDate() {
-		return motifiedDate;
+	public Date getModifiedDate() {
+		return modifiedDate;
 	}
 
-	public void setMotifiedDate(Date motifiedDate) {
-		this.motifiedDate = motifiedDate;
+	public void setModifiedDate(Date motifiedDate) {
+		this.modifiedDate = motifiedDate;
 	}
 
 	public String getCreatedBy() {
@@ -370,12 +353,12 @@ public class BuildingEntity {
 		this.createdBy = createdBy;
 	}
 
-	public String getMotifiedBy() {
-		return motifiedBy;
+	public String getModifiedBy() {
+		return modifiedBy;
 	}
 
-	public void setMotifiedBy(String motifiedBy) {
-		this.motifiedBy = motifiedBy;
+	public void setModifiedBy(String motifiedBy) {
+		this.modifiedBy = motifiedBy;
 	}
 
 	public String getManagerName() {

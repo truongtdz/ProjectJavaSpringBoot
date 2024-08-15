@@ -3,7 +3,7 @@ package com.projectbuilding.model;
 import java.util.List;
 
 public class BuildingDTO {
-	 private String name;
+	 	private String name;
 	    private String district;
 	    private String ward;
 	    private String street;
@@ -30,9 +30,6 @@ public class BuildingDTO {
 	    private Integer brokerageFee;
 	    private String note;
 	    private List<String> typeCode;
-	    private String avatar;
-	    private String imageBase64;
-	    private String imageName;
 	    
 	    
 		public String getName() {
@@ -196,24 +193,6 @@ public class BuildingDTO {
 		}
 		public void setTypeCode(List<String> typeCode) {
 			this.typeCode = typeCode;
-		}
-		public String getAvatar() {
-			return avatar;
-		}
-		public void setAvatar(String avatar) {
-			this.avatar = avatar;
-		}
-		public String getImageBase64() {
-			return imageBase64;
-		}
-		public void setImageBase64(String imageBase64) {
-			this.imageBase64 = imageBase64;
-		}
-		public String getImageName() {
-			return imageName;
-		}
-		public void setImageName(String imageName) {
-			this.imageName = imageName;
 		}
 	    
 }

@@ -2,19 +2,15 @@ package com.projectbuilding.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.projectbuilding.builder.BuildingSearchBuilder;
 import com.projectbuilding.converter.BuildingDTOConverter;
+import com.projectbuilding.entity.BuildingEntity;
 import com.projectbuilding.model.BuildingDTO;
 import com.projectbuilding.repository.BuildingRepository;
-import com.projectbuilding.repository.DistrictRopository;
-import com.projectbuilding.repository.RentAreaRepository;
-import com.projectbuilding.repository.entity.BuildingEntity;
 import com.projectbuilding.service.BuildingService;
 
 @Component

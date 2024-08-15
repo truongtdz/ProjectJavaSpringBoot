@@ -8,10 +8,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.projectbuilding.entity.BuildingEntity;
+import com.projectbuilding.entity.RentAreaEntity;
 import com.projectbuilding.model.BuildingDTO;
 import com.projectbuilding.repository.RentAreaRepository;
-import com.projectbuilding.repository.entity.BuildingEntity;
-import com.projectbuilding.repository.entity.RentAreaEntity;
 
 @Component
 public class BuildingDTOConverter {
