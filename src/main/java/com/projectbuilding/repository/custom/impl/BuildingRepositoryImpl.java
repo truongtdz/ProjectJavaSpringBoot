@@ -110,5 +110,4 @@ public class BuildingRepositoryImpl implements BuildingRepository{
         }
 		
 	}
-	
 }
