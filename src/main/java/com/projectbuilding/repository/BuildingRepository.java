@@ -7,4 +7,5 @@ import com.projectbuilding.repository.entity.BuildingEntity;
 
 public interface BuildingRepository{
 	List<BuildingEntity> findAll(Map<String, Object> map, List<String> list);
+	
 }
