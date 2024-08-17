@@ -13,7 +13,7 @@ public class RentAreaEntity {
 	private Long id;
 	
 	@Column(name = "value", nullable = false)
-	private Long value;
+	private Integer value;
 
 	public BuildingEntity getBuilding() {
 		return building;
@@ -23,11 +23,11 @@ public class RentAreaEntity {
 		this.building = building;
 	}
 
-	public Long getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
-	public void setValue(Long value) {
+	public void setValue(Integer value) {
 		this.value = value;
 	}
 	

@@ -84,10 +84,10 @@ public class BuildingRepositoryImpl implements BuildingRepository{
         if(areaFrom != null || areaTo != null){
             sql.append(" AND EXISTS (SELECT * FROM rentarea r WHERE b.id = r.buildingid ");
             if(areaFrom != null){
-                sql.append(" AND r.value >= " + areaFrom + " ");
+                sql.append("AND r.value >= " + areaFrom + " ");
             }
             if(areaTo != null){
-                sql.append(" AND r.value <= " + areaTo + " ");
+                sql.append("AND r.value <= " + areaTo + " ");
             }
             sql.append(") ");
         }

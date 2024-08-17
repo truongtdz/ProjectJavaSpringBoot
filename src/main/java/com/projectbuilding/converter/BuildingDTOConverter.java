@@ -16,16 +16,12 @@ import com.projectbuilding.repository.RentAreaRepository;
 @Component
 public class BuildingDTOConverter {
 	@Autowired
-	private RentAreaRepository rentAreaRepository;
-	@Autowired
 	private ModelMapper modelMapper;
 	
 	public BuildingDTO toBuildingDTO(BuildingEntity item) {
 		BuildingDTO building = modelMapper.map(item, BuildingDTO.class);
 		building.setAddress(item.getStreet() + "/ " + item.getWard() + "/ " + item.getDistrict());
-		List<RentAreaEntity> rentAreas = rentAreaRepository.findAreaById(item.getId());
-		String resultRentAreas = rentAreas.stream().map(it -> it.getValue().toString()).collect(Collectors.joining(","));
-		building.setRentArea(resultRentAreas);
+		List<RentAreaEntity> rentAreas = item.getRentAreaEntities();
 		List<String> typeCodes = new ArrayList<>();
 		if(item.getTypeCode() != null) {
 			for(String s : item.getTypeCode().split(",")) {

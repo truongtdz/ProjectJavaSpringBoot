@@ -25,7 +25,7 @@ public class BuildingAPI{
 	private BuildingService buildingService;
 	@Autowired 
 	private BuildingSearchBuilderConverter buildingSearchBuilderConverter;
-	@GetMapping(value = "/demo/building")
+	@GetMapping(value = "/search/building")
 	public List<BuildingDTO> deMoAPI(@RequestParam Map<String, Object> map,
 			                           @RequestParam(value = "typeCode", required = false) List<String> list) {
 		BuildingSearchBuilder buildingSearchBuilder = buildingSearchBuilderConverter.toBuildingSearchBuilder(map, list);

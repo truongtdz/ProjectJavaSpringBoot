@@ -113,6 +113,18 @@ public class BuildingEntity {
 	@OneToMany(mappedBy = "building", fetch = FetchType.LAZY)
 	private List<RentAreaEntity> rentAreaEntities = new ArrayList<>();	
 
+	public List<RentAreaEntity> getRentAreaEntities() {
+		return rentAreaEntities;
+	}
+
+	public void setRentAreaEntities(List<RentAreaEntity> rentAreaEntities) {
+		this.rentAreaEntities = rentAreaEntities;
+	}
+
+	public void setRentpriceDescription(String rentpriceDescription) {
+		this.rentpriceDescription = rentpriceDescription;
+	}
+
 	public String getTypeCode() {
 		return typeCode;
 	}

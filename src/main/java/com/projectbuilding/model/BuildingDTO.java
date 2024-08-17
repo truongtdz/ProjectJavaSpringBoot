@@ -4,57 +4,35 @@ import java.util.List;
 
 public class BuildingDTO {
 	 	private String name;
-	    private String district;
-	    private String ward;
-	    private String street;
-	    private String structure;
 	    private String Address;
 	    private Long numberOfBasement;
+	    private String managerName;
+	    private String managerPhone;
 	    private Long floorArea;
-	    private String direction;
-	    private String level;
 	    private String rentArea;
 	    private Integer rentPrice;
-	    private String rentPriceDescription;
+	    private List<String> typeCode;
 	    private String serviceFee;
 	    private String carFee;
 	    private String motoFee;
 	    private String overtimeFee;
 	    private String electricityFee;
+	    private Integer brokerageFee;
 	    private String deposit;
 	    private String payment;
 	    private String rentTime;
 	    private String decorationtime;
-	    private String managerName;
-	    private String managerPhone;
-	    private Integer brokerageFee;
+	    private String structure;
+	    private String direction;
+	    private String level;
 	    private String note;
-	    private List<String> typeCode;
-	    
+	    private String rentPriceDescription;
 	    
 		public String getName() {
 			return name;
 		}
 		public void setName(String name) {
 			this.name = name;
-		}
-		public String getDistrict() {
-			return district;
-		}
-		public void setDistrict(String district) {
-			this.district = district;
-		}
-		public String getWard() {
-			return ward;
-		}
-		public void setWard(String ward) {
-			this.ward = ward;
-		}
-		public String getStreet() {
-			return street;
-		}
-		public void setStreet(String street) {
-			this.street = street;
 		}
 		public String getStructure() {
 			return structure;
