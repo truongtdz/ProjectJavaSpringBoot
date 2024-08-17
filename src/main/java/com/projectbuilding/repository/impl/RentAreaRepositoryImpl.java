@@ -1,4 +1,4 @@
-package com.projectbuilding.repository.custom.impl;
+package com.projectbuilding.repository.impl;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

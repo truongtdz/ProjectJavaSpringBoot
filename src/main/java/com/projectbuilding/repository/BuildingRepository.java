@@ -1,7 +1,10 @@
 package com.projectbuilding.repository;
 
-import com.projectbuilding.repository.custom.BuildingRepositoryCustom;
+import java.util.List;
 
-public interface BuildingRepository extends BuildingRepositoryCustom{
-	
+import com.projectbuilding.builder.BuildingSearchBuilder;
+import com.projectbuilding.entity.BuildingEntity;
+
+public interface BuildingRepository{
+	List<BuildingEntity> findAll(BuildingSearchBuilder buildingSearchBuilder);
 }
